@@ -1,0 +1,226 @@
+<div class="web-header">School Organizer</div>
+<div class="sem-body" style="display: none;">
+    <div class="sem-top">
+        <div class="sem-title">Select A Semester</div>
+        <div class="sem-add">
+            <button id="semAddButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+                Add Semester
+            </button>
+        </div>
+    </div>
+    <div class="sem-sems">
+
+    </div>
+</div>
+<div class="cor-body" style="display: none;">
+    <div class="cor-top">
+        <div class="cor-title">Select A Course</div>
+        <div class="cor-add">
+            <button id="corAddButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+                Add Course
+            </button>
+        </div>
+    </div>
+    <div class="cor-cors">
+
+    </div>
+</div>
+<div class="course-body" style="display: none;">
+    <div class="course-int row">
+        <div class="course-info col-md-6">
+            <div class="prof row">
+                <div class="prof-name col-sm-6"></div>
+                <div class="prof-email col-sm-6"></div>
+            </div>
+            <div class="ta row">
+                <div class="ta-name col-sm-6"></div>
+                <div class="ta-email col-sm-6"></div>
+            </div>
+            <div class="row">
+                <div class="">
+
+                </div>
+            </div>
+        </div>
+        <div class="course-topics col-md-2">
+
+            <div class="grp-cont">
+                <div class="la-top">
+                    <div class="la-title">Groups</div>
+                    <div class="la-add">
+                        <button id="grpAddButton" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#topModal">
+                            Add Group
+                        </button>
+                    </div>
+                </div>
+                <div id="la-grps" class="grps">
+                    <div class="grp">
+                        <div class="grp-check">
+                            <input class="form-check-input grp-input" type="checkbox" value="">
+                        </div>
+                        <div class="grp-wrp">
+                            <div class="grp-name">
+                                Grp 1
+                            </div>
+                            <div class="grp-delete">
+                                Edit
+                            </div>
+                            <div class="grp-delete">
+                                Delete
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="la-top">
+                <div class="la-title">Topics</div>
+                <div class="la-add">
+                    <button id="topAddButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topModal">
+                        Add Topic
+                    </button>
+                    <button id="studyButton" type="button" class="btn btn-primary">
+                        Study
+                    </button>
+                </div>
+            </div>
+            <div class="la-conts">
+                <div id="la-tops" class="la-cont">
+                    <div class="top-con">
+                        <div class="top-check"><input class="form-check-input" type="checkbox" value=""></div>
+                        <div class="top-main">
+                            <div class="top-name">Lecture 4</div>
+                            <div class="top-edit">⋮</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-lecs col-md-2">
+            <div class="la-top">
+                <div class="la-title">Lectures</div>
+                <div class="la-add">
+                    <button id="lecAddButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+                        Add Lecture
+                    </button>
+                </div>
+            </div>
+            <div class="la-conts">
+                <div id="la-lecs" class="la-cont">
+
+                </div>
+            </div>
+        </div>
+        <div class="course-asss col-md-2">
+            <div class="la-top">
+                <div class="la-title">Assignments</div>
+                <div class="la-add">
+                    <button id="assAddButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+                        Add Assignment
+                    </button>
+                </div>
+            </div>
+            <div class="la-conts">
+                <div id="la-asss" class="la-cont">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="lec-body" style="display: none;">
+    <div class="row lec-top">
+        <div class="col-md-2 lec-watched">
+            <div class="form-check form-switch form-switch-xl" style="padding: 10px;">
+                <input type="checkbox" class="form-check-input " name="watched">
+                <label class="form-check-label">Watched</label>
+            </div>
+        </div>
+        <div class="col-md-2 lec-topic">
+            <select class="form-select lec-tsel" aria-label="Default select example">
+            </select>
+        </div>
+        <div class="col-md-8 row lec-link">
+            <div class="col-md-10 lec-lint">
+                Link: Empty
+            </div>
+            <div class="col-md-2 lec-copy">
+                <button id="lec-copy" type="button" class="btn btn-primary">Copy Link</button>
+                <button id="lec-red" type="button" class="btn btn-primary">Redirect</button>
+            </div>
+        </div>
+    </div>
+    <div class="row lec-main">
+        <div class="col-md-6 lec-notes">
+            <div id="notes" class="notes-body">
+                <div class="notes-header">
+
+                </div>
+                <div class="notes-editor">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 lec-cards">
+            <div class="lec-cards">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="addModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add a Semester</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-delete" >Delete</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary submitAlt"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="topModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add a Topic</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" placeholder="Name" aria-label="Username">
+                <div class="invalid-feedback" style="display: block">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-delete" >Delete</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary topAlt"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="confirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary goBack" data-bs-dismiss="modal">Go Back</button>
+                <button type="button" class="btn btn-danger confDel">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
