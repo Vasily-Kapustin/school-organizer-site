@@ -1,4 +1,4 @@
-# school-organizer-site
+# School Organizer Site
 
 This is a project that I worte to help me organize university course work, I wrote this during a very hectic period of my life where I started to notice that my regular study habbits would not cut it. It genuinely helped me get back from being 3 weeks behind on my courses.
 
